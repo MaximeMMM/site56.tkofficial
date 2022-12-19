@@ -31,7 +31,7 @@
 </head>
 
 
-
+<body>
 
 <div class="more-information">
 		<div class="container">
@@ -45,3 +45,70 @@
 			
 		</div>
 	</div>
+
+
+
+
+
+
+    <script type="text/javascript">
+    
+      $(document).ready(function(){
+        $('.toggle-menu').jPushMenu({closeOnClickLink: false});
+        $('.dropdown-toggle').dropdown();
+      });
+      
+    </script>
+    
+    <script type="text/javascript">
+    
+    	var terms = ["une map exclusif", "un wiki pour vous aider", "des script exclusif"];
+
+		function rotateTerm() {
+  			var ct = $("#rotate").data("term") || 0;
+  			$("#rotate").data("term", ct == terms.length -1 ? 0 : ct + 1).text(terms[ct]).fadeIn()
+              	.delay(1000).fadeOut(200, rotateTerm);
+		}
+		$(rotateTerm);
+
+    </script>
+
+    
+	<script type="text/javascript">
+
+  	jQuery('.counter-item').appear(function() {
+    	jQuery('.counter-number').countTo();
+    	jQuery(this).addClass('funcionando');
+   	 	console.log('funcionando');
+  	});
+  
+	</script>
+	
+    <script type="text/javascript">
+    
+        $(document).ready(function () {
+            $("#clients-slider").carousel({
+                interval: 5000 //TIME IN MILLI SECONDS
+            });
+        });
+        
+    </script>
+    
+    
+    <script type="text/javascript">
+    
+    $(function () {
+  		$.scrollUp({
+    		scrollName: 'scrollUp', // Element ID
+    		topDistance: '300', // Distance from top before showing element (px)
+    		topSpeed: 600, // Speed back to top (ms)
+    		animation: 'fade', // Fade, slide, none
+    		animationInSpeed: 200, // Animation in speed (ms)
+    		animationOutSpeed: 200, // Animation out speed (ms)
+    		activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+    		scrollImg: true,
+  		});
+	});
+    
+    </script>
+    </body>
